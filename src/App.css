@@ -1,0 +1,14 @@
+#root {
+	flex-direction: row;
+	align-items: stretch;
+	overflow: hidden;
+}
+
+#root > nav {
+	flex: 0 0 auto;
+}
+
+#root > *:not(nav) {
+	flex: 1 1 auto;
+	min-width: 0;
+}
