@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { ApiFilter } from "../types";
 
-const API_BASE = "/api/ai-agent";
+const API_BASE = import.meta.env.VITE_API_URL;
 
 export async function fetchAIResponse(query: string, filters: ApiFilter[]) {
   const response = await axios.post(
