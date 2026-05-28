@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://aiagent-service2-608887190314.us-central1.run.app/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/:path*",
+      "headers": [
+        {
+          "key": "x-api-key",
+          "value": "@ai_agent_api_key"
+        }
+      ]
+    }
+  ]
+}
