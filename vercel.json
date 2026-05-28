@@ -10,7 +10,7 @@
       "source": "/api/:path*",
       "headers": [
         {
-          "key": "x_api_key",
+          "key": "X-API-KEY",
           "value": "@ai_agent_api_key"
         }
       ]
