@@ -1,14 +1,11 @@
 import axios from "axios";
 import type { ApiFilter } from "../types";
 
-const API_BASE = import.meta.env.VITE_API_URL;
-
 export async function fetchAIResponse(query: string, filters: ApiFilter[]) {
-  const response = await axios.post(
-    `${API_BASE}/api/v1/agent`,
-    { query, filters },
-  );
-
+  const response = await axios.post("/api/proxy", {
+    query,
+    filters,
+  });
   return response.data as { response: string };
 }
 
